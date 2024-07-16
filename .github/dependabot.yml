@@ -9,7 +9,9 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-    allow:
-      - dependency-type: "all"
-        update-types: ["version-update:semver-minor"]
-
+    groups:
+      minor-and-patch:
+        applies-to: security-updates
+        update-types:
+        - "patch"
+        - "minor"
