@@ -9,4 +9,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-    versioning-strategy: "increase-minor"
+    allow:
+      - dependency-type: "all"
+        update-types: ["version-update:semver-minor"]
