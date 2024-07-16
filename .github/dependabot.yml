@@ -8,7 +8,7 @@ updates:
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     pull-request-branch-name:
       # Separate sections of the branch name with a hyphen,by default dependabot include slash
       separator: "-"
