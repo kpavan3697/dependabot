@@ -18,9 +18,13 @@ updates:
           - "version-update:semver-patch"
         commit-message:
           prefix: "Update"
-    commit-message:
-      prefix: "security"
+      security-updates:
+        patterns:
+          - dependency-name: "*"
+        commit-message:
+          prefix: "Security"
     ignore:
       - dependency-name: "*"
         update-types:
           - "version-update:semver-major"
+
