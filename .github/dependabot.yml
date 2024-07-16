@@ -11,7 +11,18 @@ updates:
       interval: "daily"
     groups:
       minor-and-patch:
-        applies-to: security-updates
+        patterns:
+          - "*"
         update-types:
-        - "patch"
-        - "minor"
+          - "version-update:semver-minor"
+          - "version-update:semver-patch"
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "security"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"
