@@ -11,9 +11,7 @@ updates:
       interval: "daily"
     groups:
       minor-and-patch:
-      applies-to: security-updates
-      patterns:
-      - "@angular*"
-      update-types:
-      - "patch"
-      - "minor"
+        update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
+
